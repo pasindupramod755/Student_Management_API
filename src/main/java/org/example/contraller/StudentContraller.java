@@ -22,15 +22,14 @@ public class StudentContraller {
         studentsList.add(new Student("S001","pasidnu","Sooriyawewa",21));
         studentsList.add(new Student("S002","Tharindu","Mathara",21));
         studentsList.add(new Student("S003","Navindu","Galle",21));
-
         return studentsList;
     }
 
     @PostMapping
-    public void save(@RequestBody Student student){
-        studentsList.add(student);
-        System.out.println("OK");
-    }
+        public void save(@RequestBody Student student){
+            studentsList.add(student);
+            System.out.println("OK");
+        }
 
     @GetMapping("{word}")
     public String getWord(@PathVariable String word){
